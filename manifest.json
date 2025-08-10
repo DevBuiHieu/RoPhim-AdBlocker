@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Rophim AdBlock",
+  "version": "1.0.3",
+  "description": "Chặn mọi quảng cáo trên trang Rophim.",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "storage",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "*://rophim.me/*",
+    "*://www.rophim.me/*",
+    "<all_urls>"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Rophim AdBlock",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": { "service_worker": "background.js" },
+  "declarative_net_request": {
+    "rule_resources": [
+      { "id": "block_ads", "enabled": true, "path": "rules.json" }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://rophim.me/*", "*://www.rophim.me/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

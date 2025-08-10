@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  width: 240px;
+}
+
+.container {
+  text-align: center;
+  padding: 15px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.desc {
+  font-size: 12px;
+  color: #bbb;
+  margin-bottom: 12px;
+}
+
+.status {
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #555;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.7);
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+.slider.round {
+  border-radius: 30px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch:hover .slider {
+  background-color: #777;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 12px 0;
+}
+
+.blockedCount {
+  font-size: 13px;
+  color: #bbb;
+}
+
+.log {
+  background: #111;
+  color: #0f0;
+  font-size: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+  text-align: left;
+  padding: 5px;
+  border-radius: 4px;
+}

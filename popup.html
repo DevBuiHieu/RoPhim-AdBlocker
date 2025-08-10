@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Rophim AdBlock</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <img src="icons/icon128.png" alt="AdBlock Icon" class="logo">
+    <h1>Rophim AdBlock</h1>
+    <p class="desc">Chặn quảng cáo cờ bạc trên Rophim</p>
+
+    <label class="switch">
+      <input type="checkbox" id="toggleSwitch">
+      <span class="slider round"></span>
+    </label>
+    <p id="statusText" class="status">Đang bật</p>
+
+    <hr>
+
+    <label class="switch small">
+      <input type="checkbox" id="devModeSwitch">
+      <span class="slider round"></span>
+    </label>
+    <p class="status">Developer Mode</p>
+
+    <hr>
+
+    <p class="blockedCount">Quảng cáo đã chặn: <span id="count">0</span></p>
+
+    <div id="logContainer" class="log"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
